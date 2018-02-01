@@ -1,0 +1,13 @@
+[Unit]
+Description=Credits wallet daemon
+Requires=creditsd.service
+After=creditsd.service
+
+[Service]
+Type=oneshot
+User=max
+ExecStartPre=/bin/sleep 10
+ExecStart=/home/max/.local/bin/set_credits_pid.fish
+
+[Install]
+WantedBy=multi-user.target

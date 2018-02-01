@@ -1,0 +1,13 @@
+[Unit]
+Description=Credits wallet daemon
+After=network.service
+Requires=creditsd-affinity.service
+Before=creditsd-affinity.service
+
+[Service]
+User=max
+ExecStart=/home/max/.local/bin/creditsd
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
