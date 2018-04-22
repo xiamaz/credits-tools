@@ -3,7 +3,7 @@
 # Change username here to your preferred username
 set username max
 # Set version of credits client to be used
-set version "v1.1.1.0"
+set version "v1.2.0.0"
 
 if cat /proc/cpuinfo | grep avx2
 	set version -avx2
@@ -11,7 +11,7 @@ else
 	set version
 end
 
-set file "credits-1.1.1-linux$version.tar.gz"
+set file "credits-$version-linux.tar.gz"
 set url "https://github.com/CRDS/Credits/releases/download/$version/$file"
 
 if not test -e $file
